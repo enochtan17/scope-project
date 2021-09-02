@@ -28,7 +28,57 @@ Example 4:
 
 ***********************************************************************/
 
-// your code here
+// function countDownTimer(n){
+//   let count = n;
+//   if (count - n === 0) return "Happy New Year!";
+//   // for (let i = 0; i < n; i++){
+//   //   if (i < n-1) return function(cb){return cb};
+//   //   else if (i === n-1) return "Happy New Year!";
+//   // }
+//   else{
+//     return countDownTimer(n-1);  
+//   }
+
+
+// function hiddenCounter() {
+//   let count = 0
+//   return function() {
+//     // count++
+//     return ++count
+//   }
+// }
+
+// function countDownTimer(n){
+//   let count = n;
+//   console.log("n's value when called is " + count);
+//   if (count === 0) return "Happy New Year!"
+//   else {
+//     count--;
+//     console.log("n is now " + count);
+//     return function(){return "The function has been called"}
+//   }
+// }
+  
+// }
+
+function countDownTimer(n){
+  if (n === 0) return "Happy New Year";
+  n--;
+ };
+
+console.log(countDownTimer(0)); // prints "Happy New Year!"
+
+let oneDay = countDownTimer(1); // returns a function
+console.log(oneDay()); // prints "Happy New Year!"
+
+let twoDays = countDownTimer(2); // returns a function
+console.log(twoDays()); // returns a function
+console.log(twoDays()); // prints "Happy New Year!"
+
+let threeDays = countDownTimer(3); // returns a function
+console.log(threeDays()); // returns a function
+console.log(threeDays()); // returns a function
+console.log(threeDays()); // prints "Happy New Year!"
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
