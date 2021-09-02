@@ -12,6 +12,16 @@ arrowAvgValue([100, 60, 64]); // => 74.66666666666667
 
 // your code here!
 
+let arrowAvgValue = arr => {
+  let avg = 0
+
+  for (let i = 0; i < arr.length; i++) {
+    avg += arr[i]
+  }
+
+  return avg / arr.length
+}
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
