@@ -22,7 +22,20 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
   fat-arrow function
 ***********************************************************************/
 
-// your code here
+function lazyAdder(firstNum){
+
+  return function(secondNum){
+    return function(thirdNum)
+    {
+      return firstNum + secondNum + thirdNum;
+    }
+  }
+}
+
+/*
+I would replace the blocks with arrow function notation, 
+placing the parameters and return values within the proper place in the syntax
+*/
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

@@ -29,29 +29,33 @@ Example 4:
 ***********************************************************************/
 
 
-function countDownTimer(n){
-  if (n === 0) return "Happy New Year";
-  else if (n > 0){
-    return function(){}
-    };
+function countDownTimer(n) {
+
+  if (n === 0) return "Happy New Year!";
+  return function arbitrary(){
+    n--;
+    if (n === 0) return "Happy New Year!";
+    return arbitrary;
   }
-}
+} 
+
+//The big lesson here was, everything needs to exist inside the nested function.
   
 
 
 console.log(countDownTimer(0)); // prints "Happy New Year!"
 
 let oneDay = countDownTimer(1); // returns a function
-console.log("console.log(oneDay()) says " + oneDay()); // prints "Happy New Year!"
+console.log(oneDay()); // prints "Happy New Year!"
 
 let twoDays = countDownTimer(2); // returns a function
-console.log("console.log(twoDays()) says " + twoDays()); // returns a function
-console.log("console.log(twoDays()) says " + twoDays()); // prints "Happy New Year!"
+console.log(twoDays()); // returns a function
+console.log(twoDays()); // prints "Happy New Year!"
 
 let threeDays = countDownTimer(3); // returns a function
-console.log("console.log(threeDays()) says " + threeDays()); // returns a function
-console.log("console.log(threeDays()) says " + threeDays()); // returns a function
-console.log("console.log(threeDays()) says " + threeDays()); // prints "Happy New Year!"
+console.log(threeDays()); // returns a function
+console.log(threeDays()); // returns a function
+console.log(threeDays()); // prints "Happy New Year!"
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
