@@ -25,7 +25,19 @@ Example 3:
 
 ***********************************************************************/
 
-// your code here
+function coinCollector(numCoins){
+
+  //the function inside can only be invoked numCoins times
+  let slotsRemaining = numCoins;
+  let arrayOfCoins = [];
+
+  return function addCoin(valueOfCoin){
+    arrayOfCoins.push(valueOfCoin);
+    slotsRemaining--;
+    // console.log("There are " + slotsRemaining + " slots remaining.");
+    if (slotsRemaining === 0) return arrayOfCoins;
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
