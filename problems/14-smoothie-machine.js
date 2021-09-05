@@ -22,7 +22,27 @@ console.log(smoothie2("pineapple"));
 // prints "I'm having a smoothie with apples and bananas and berries and pineapple"
 ***********************************************************************/
 
-// your code here
+function smoothieMachine(...ingredients){
+
+  let order = "I'm having a smoothie with "
+  ingredients.forEach( ele => {
+    if (order === "I'm having a smoothie with "){
+      order += ele;
+    } else order = order + " and " + ele;
+  });
+
+  return function(...ingredients){
+    
+    ingredients.forEach( ele => {
+      if (order === "I'm having a smoothie with "){
+        order += ele;
+      } else order = order + " and " + ele;
+    })
+
+    return order;
+  };
+
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
