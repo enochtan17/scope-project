@@ -23,10 +23,11 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 ***********************************************************************/
 
 function lazyAdder(firstNum){
-
+  // console.log("lazyAdder has been invoked. firstNum is " + firstNum);
   return function(secondNum){
-    return function(thirdNum)
-    {
+    // console.log("the function that accepts secondNum has been invoked. secondNum is " + secondNum);
+    return function(thirdNum){
+      // console.log("the function that accepts thirdNum has been invoked. thirdNum is " + thirdNum);
       return firstNum + secondNum + thirdNum;
     }
   }
@@ -36,6 +37,16 @@ function lazyAdder(firstNum){
 I would replace the blocks with arrow function notation, 
 placing the parameters and return values within the proper place in the syntax
 */
+
+// let firstAdd = lazyAdder(1);
+// let secondAdd = firstAdd(2);
+// let sum = secondAdd(3);
+// console.log(sum); // prints 6
+
+// let func1 = lazyAdder(10);
+// let func2 = func1(20);
+// let total = func2(3);
+// console.log(total); // prints 33
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

@@ -24,7 +24,31 @@ console.log(table2(75)); // STILL prints 6
 
 ***********************************************************************/
 
-// your code here
+function recVolume(height){
+  // console.log("Height is " + height);
+  let length, width;
+  return function(dimension){ //every time this function is called, a new variable is initialized
+    if (length === undefined){
+      length = dimension;
+      // console.log("Length is " + length);
+    } else if (width === undefined){
+      width = dimension;
+      // console.log("Width is " + width);
+      return height*length*width;
+    } else return height*length*width;
+  }
+}
+
+// let table1 = recVolume(5); // returns a function
+// table1(4); // returns a function
+// console.log(table1(3)); // prints 60
+// console.log(table1(145)); // STILL prints 60
+
+// let table2 = recVolume(3); // returns a function
+// table2(2); // returns a function
+// console.log(table2(1)); // prints 6
+// console.log(table2(75)); // STILL prints 6
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
